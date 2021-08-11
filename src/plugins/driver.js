@@ -6,7 +6,7 @@ VueDriver.steps = []
 
 VueDriver.install = function (Vue, options) {
   // initialize Driver
-  VueDriver.driver = new Driver({})
+  VueDriver.driver = new Driver(options.driverOptions || {})
   // driver.highlight('selector');
 
   Vue.directive('driver-step', {
